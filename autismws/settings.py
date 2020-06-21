@@ -182,7 +182,7 @@ EMAIL_HOST_USER = 'ruromgar@gmail.com'
 EMAIL_USE_TLS = True
 
 # Note that this is NOT the mail password but an application password for GMail
-EMAIL_HOST_PASSWORD = 'kpaxckzekkqfmeid'
+EMAIL_HOST_PASSWORD = 'FILL ME'
 
 GOOGLE_APPLICATION_CREDENTIALS = os.path.join(BASE_DIR, "content/creds/NaoWebserver-897a8a5ad29e.json")
 PYTHON_PATH = "/usr/bin/python"
