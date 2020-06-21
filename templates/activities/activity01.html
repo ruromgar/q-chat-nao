@@ -1,0 +1,198 @@
+{% extends "activities/activity_base.html" %}
+{% load i18n %}
+{% load static %}
+{% load auth_extras %}
+
+{# Bootstrap related stuff #}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{% bootstrap_messages %}
+{% load crispy_forms_tags %}
+
+{% block base_title %}
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Actividad 01</h1>
+        <p class="lead">¿Te mira tu hijo/a cuando le llamas por su nombre?</p>
+    </div>
+{% endblock %}
+
+{% block base_content %}
+
+    <form method="post" enctype="multipart/form-data" action="/activity01/">
+        {% csrf_token %}
+        {{ form.as_p }}
+    </form>
+
+    <div class="container">
+        <div class="card-deck mb-3 text-center">
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Patient</h4>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <select class="form-control" id="dropdown_patient">
+                            <option value="-1" data-username="" data-fullname="" data-joined="">Select a patient...</option>
+                            {% for pat in patients %}
+                                <option value="{{pat.id}}"
+                                        data-username="{{pat.username}}"
+                                        data-name = "{{pat.first_name}}"
+                                        data-fullname="{{pat.first_name}} {{pat.last_name}}"
+                                        data-joined="{{ pat.date_joined }}">
+                                    {{pat.username}}
+                                </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li id="pat_username"></li>
+                        <li id="pat_fullname"></li>
+                        <li id="pat_joined"></li>
+                    </ul>
+                    <button type="button" class="btn btn-lg btn-block btn-primary" id="btn_select_patient" disabled>Select</button>
+                </div>
+            </div>
+            <div class="card mb-8 box-shadow">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Yes - No</h4>
+                </div>
+                <div class="card-body">
+                    <button type="button" class="btn btn-lg btn-success" id="btn_yes" style="width:45%" disabled>Yes</button>
+                    <button type="button" class="btn btn-lg btn-danger" id="btn_no" style="width:45%" disabled>No</button>
+                    <p id="mytext"></p>
+                </div>
+            </div>
+        </div>
+        <div class="card-deck mb-3 text-center">
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Stop activity - Danger!</h4>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="comments">
+                    </div>
+                    <button type="button" class="btn btn-lg btn-block btn-danger" id="btn_stop">Stop</button>
+                </div>
+            </div>
+            <div class="col mb-4"></div>
+            <div class="col mb-4"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+
+    <script>
+
+      let patient_id = 0;
+      let patient_name = '';
+
+      $(function(){
+
+        $('#dropdown_patient').change(function() {
+          patient_id = $('#dropdown_patient option:selected').val();
+          patient_name = $('#dropdown_patient option:selected').data('name');
+
+          if (patient_id !== -1) {
+            $('#pat_username').text("Username: " + $('#dropdown_patient option:selected').data('username'));
+            $('#pat_fullname').text("Full name: " + $('#dropdown_patient option:selected').data('fullname'));
+            $('#pat_joined').text("Joined at: " + $('#dropdown_patient option:selected').data('joined'));
+            $('#btn_select_patient').prop('disabled', false);
+          } else {
+            $('#pat_username').text("");
+            $('#pat_fullname').text("");
+            $('#pat_joined').text("");
+            $('#btn_select_patient').prop('disabled', true);
+          }
+        });
+
+        $('#btn_select_patient').click(function() {
+          $('#btn_yes').prop('disabled', false);
+          $('#btn_no').prop('disabled', false);
+          $('#btn_select_patient').prop('disabled', true);
+          $('#dropdown_patient').prop('disabled', true);
+
+          nao_action("Stand");
+          nao_animated_speech(getWelcomeSpeech());
+        });
+
+        $('#btn_stop').click(function() {
+          if($('#comments').val() === '' || $('#comments').val() == null)
+          {
+            alert("Por favor, escribe la razón por la que detienes la actividad.")
+          }
+          else
+          {
+            $.post('/activity01/', {
+              'csrfmiddlewaretoken': "{{ csrf_token }}",
+              'patient': patient_id.toString(),
+              'comments': $('#comments').val(),
+              'answer': false,
+            }, function (data) {
+              window.location.replace(data['error_url']);
+            });
+          }
+        });
+
+        $('#btn_yes').click(function() {
+          $('#btn_yes').prop('disabled', true);
+          $('#btn_no').prop('disabled', true);
+
+          // Si reacciona, no es síntoma TEA
+          postData(false);
+        });
+
+        $('#btn_no').click(function() {
+          $('#btn_yes').prop('disabled', true);
+          $('#btn_no').prop('disabled', true);
+
+          // Si no reacciona, es síntoma TEA
+          postData(true);
+        });
+
+        function postData(answer) {
+          $.post('/activity01/', {
+              'csrfmiddlewaretoken': "{{ csrf_token }}",
+              'patient': patient_id.toString(),
+              'answer': answer,
+            },
+            function (data) {
+              switch (data['status']) {
+                case 0:
+                  window.location.replace(data['error_url']);
+                  break;
+                case 1:
+                  window.location.replace(data['success_url']);
+                  break;
+                default:
+                  window.location.replace(data['error_url']);
+                  break;
+              }
+            }
+          );
+        }
+
+        function getWelcomeSpeech() {
+          return [
+            {
+              text: "¡Hola, " + patient_name + "! Soy NAO, ¿qué tal estás?.",
+              animation: "animations/Stand/Gestures/Hey_1"
+            },
+          ];
+        }
+
+        function getGoodByeSpeech() {
+          return [
+            {
+              text: "¡Adiós, " + patient_name + "! Me lo he pasado muy bien.",
+              animation: "animations/Stand/Gestures/Hey_1"
+            },
+          ];
+        }
+      });
+
+    </script>
+
+{% endblock %}

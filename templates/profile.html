@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load auth_extras %}
+
+{# Bootstrap related stuff #}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{% bootstrap_messages %}
+{% load crispy_forms_tags %}
+
+{% block base_title %}
+
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Perfil personal</h1>
+        {% if request.user|has_group:"Patients" %}
+            <p class="lead"> </p>
+        {% elif request.user|has_group:"Therapists" %}
+            <p class="lead"> </p>
+        {% else %}
+            <p class="lead"> </p>
+        {% endif %}
+    </div>
+
+{% endblock %}
+
+{% block base_content %}
+    <div class="container">
+        <form action="." method="POST" class="padding">
+            {% csrf_token %}
+            {{ noodle_form|crispy }}
+            {{ formset.management_form|crispy }}
+            {{ formset|crispy }}
+            <button type="submit" class="btn btn-lg btn-primary">Save</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <input type="hidden" id="answers" name="answers" value="{{ answers }}" readonly>
+        <p class="lead">Resultados de las actividades y puntuación total</p>
+        <ul>
+            {%  for k, v in answers.items|dictsort:"0.lower" %}
+                <li>{{ k }}: {{ v }}</li>
+            {%  endfor %}
+        </ul>
+    </div>
+
+{% endblock %}

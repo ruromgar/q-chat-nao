@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load auth_extras %}
+
+{# Bootstrap related stuff #}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{% bootstrap_messages %}
+{% load crispy_forms_tags %}
+
+{% block base_title %}
+
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Lista de usuarios</h1>
+    </div>
+
+{% endblock %}
+
+{% block base_content %}
+    <div class="container">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre completo</th>
+                <th scope="col">Fecha de alta</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for p in patients %}
+                <tr>
+                    <th scope="row">{{p.id}}</th>
+                    <td><a href="{% url 'profile' p.id %}">{{p.first_name}} {{p.last_name}}</a></td>
+                    <td>{{ p.date_joined }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

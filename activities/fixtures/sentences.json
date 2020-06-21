@@ -1,0 +1,478 @@
+[
+{
+  "model": "activities.sentence",
+  "pk": 7,
+  "fields": {
+    "sentence": "El anillo es brillante"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 8,
+  "fields": {
+    "sentence": "El \u00e1rbol es grande"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 9,
+  "fields": {
+    "sentence": "El coche es r\u00e1pido"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 10,
+  "fields": {
+    "sentence": "El ave es veloz"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 11,
+  "fields": {
+    "sentence": "La bala es r\u00e1pida"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 12,
+  "fields": {
+    "sentence": "El barco es enorme"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 13,
+  "fields": {
+    "sentence": "El bol\u00edgrafo es azul"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 14,
+  "fields": {
+    "sentence": "El calcet\u00edn es blanco"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 15,
+  "fields": {
+    "sentence": "La cama es blanda"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 19,
+  "fields": {
+    "sentence": "La chapa es met\u00e1lica"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 21,
+  "fields": {
+    "sentence": "El circo es divertido"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 22,
+  "fields": {
+    "sentence": "El comedor es ruidoso"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 23,
+  "fields": {
+    "sentence": "La corbata es verde"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 24,
+  "fields": {
+    "sentence": "El cuaderno es negro"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 25,
+  "fields": {
+    "sentence": "El cuchillo es afilado"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 26,
+  "fields": {
+    "sentence": "El deporte es bueno"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 27,
+  "fields": {
+    "sentence": "El diente es blanco"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 28,
+  "fields": {
+    "sentence": "El disco es redondo"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 29,
+  "fields": {
+    "sentence": "El discurso es largo"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 30,
+  "fields": {
+    "sentence": "El enano es bajito"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 32,
+  "fields": {
+    "sentence": "El faro es luminoso"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 33,
+  "fields": {
+    "sentence": "La fiesta es divertida"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 35,
+  "fields": {
+    "sentence": "El gato es negro"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 36,
+  "fields": {
+    "sentence": "El gigante es grande"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 38,
+  "fields": {
+    "sentence": "La guitarra es el\u00e9ctrica"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 39,
+  "fields": {
+    "sentence": "La l\u00e1mpara es alta"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 40,
+  "fields": {
+    "sentence": "La lana es suave"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 41,
+  "fields": {
+    "sentence": "El l\u00e1piz es amarillo"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 42,
+  "fields": {
+    "sentence": "Las lentes son fr\u00e1giles"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 43,
+  "fields": {
+    "sentence": "La librer\u00eda es silenciosa"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 44,
+  "fields": {
+    "sentence": "El libro es entretenido"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 45,
+  "fields": {
+    "sentence": "La llave es gris"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 46,
+  "fields": {
+    "sentence": "La mano es \u00e1spera"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 47,
+  "fields": {
+    "sentence": "La ma\u00f1ana es tranquila"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 48,
+  "fields": {
+    "sentence": "El mensaje es urgente"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 49,
+  "fields": {
+    "sentence": "La nieve es blanca"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 50,
+  "fields": {
+    "sentence": "La nube es esponjosa"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 51,
+  "fields": {
+    "sentence": "El ojo es marr\u00f3n"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 52,
+  "fields": {
+    "sentence": "La oreja es peque\u00f1a"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 53,
+  "fields": {
+    "sentence": "La piedra es bonita"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 54,
+  "fields": {
+    "sentence": "La pistola es peligrosa"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 55,
+  "fields": {
+    "sentence": "La pluma hace cosquillas"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 56,
+  "fields": {
+    "sentence": "El puente es colgante"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 57,
+  "fields": {
+    "sentence": "La puerta es vieja"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 58,
+  "fields": {
+    "sentence": "El refugio es seguro"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 59,
+  "fields": {
+    "sentence": "El reloj es caro"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 60,
+  "fields": {
+    "sentence": "La rueda es redonda"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 61,
+  "fields": {
+    "sentence": "La sala es oscura"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 62,
+  "fields": {
+    "sentence": "La sart\u00e9n es antioxidante"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 63,
+  "fields": {
+    "sentence": "El sill\u00f3n es comodo"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 64,
+  "fields": {
+    "sentence": "El sol es cegador"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 65,
+  "fields": {
+    "sentence": "El taburete es inc\u00f3modo"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 66,
+  "fields": {
+    "sentence": "El tel\u00e9fono es m\u00f3vil"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 67,
+  "fields": {
+    "sentence": "El tenis es aburrido"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 68,
+  "fields": {
+    "sentence": "La tienda est\u00e1 cerrada"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 69,
+  "fields": {
+    "sentence": "La trompeta es ruidosa"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 70,
+  "fields": {
+    "sentence": "La vela es blanca"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 71,
+  "fields": {
+    "sentence": "La ventana est\u00e1 abierta"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 72,
+  "fields": {
+    "sentence": "El vino sabe mal"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 73,
+  "fields": {
+    "sentence": "El viol\u00edn suena bien"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 74,
+  "fields": {
+    "sentence": "La yegua corre mucho"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 75,
+  "fields": {
+    "sentence": "El zapato es negro"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 76,
+  "fields": {
+    "sentence": "La casa es roja"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 77,
+  "fields": {
+    "sentence": "La silla es verde"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 78,
+  "fields": {
+    "sentence": "La agenda es azul"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 79,
+  "fields": {
+    "sentence": "La zapatilla es blanca"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 80,
+  "fields": {
+    "sentence": "El pollo es amarillo"
+  }
+},
+{
+  "model": "activities.sentence",
+  "pk": 81,
+  "fields": {
+    "sentence": "El ni\u00f1o es peque\u00f1o"
+  }
+}
+]

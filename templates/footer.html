@@ -1,0 +1,23 @@
+{% load i18n %}
+{% load static %}
+{% load auth_extras %}
+
+{# Bootstrap related stuff #}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{% bootstrap_messages %}
+{% load crispy_forms_tags %}
+
+<!doctype html>
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1" id="footer_text">&copy; 2017-2018 Nao WebServer</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Privacy</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+      </footer>
+</html>
+
+

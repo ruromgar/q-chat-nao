@@ -1,0 +1,35 @@
+{% extends "activities/activity_base.html" %}
+{% load i18n %}
+{% load static %}
+{% load auth_extras %}
+
+{# Bootstrap related stuff #}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{% bootstrap_messages %}
+{% load crispy_forms_tags %}
+
+{% block base_title %}{% endblock %}
+
+{% block base_content %}
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+
+    <body class="text-center">
+
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">An error has occurred - or the activity has been manually stopped.</h1>
+        <p class="lead">Sometimes, shit happens. Nothing to worry about.</p>
+        <p class="lead">
+          <a href="{% url 'home' %}" class="btn btn-lg btn-secondary">Home page</a>
+        </p>
+      </main>
+    </body>
+
+    </div>
+{% endblock %}
+
+{% block javascript %}
+<script src="{% static 'js/MainAjax.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+{% endblock %}

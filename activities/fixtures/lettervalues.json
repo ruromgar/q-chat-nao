@@ -1,0 +1,530 @@
+[
+{
+  "model": "activities.lettervalue",
+  "pk": 6,
+  "fields": {
+    "letter": "a",
+    "value": 2
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 7,
+  "fields": {
+    "letter": "\u00e1",
+    "value": 2
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 8,
+  "fields": {
+    "letter": "b",
+    "value": 3
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 9,
+  "fields": {
+    "letter": "c",
+    "value": 5
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 10,
+  "fields": {
+    "letter": "d",
+    "value": 7
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 11,
+  "fields": {
+    "letter": "e",
+    "value": 11
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 12,
+  "fields": {
+    "letter": "\u00e9",
+    "value": 11
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 13,
+  "fields": {
+    "letter": "f",
+    "value": 13
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 14,
+  "fields": {
+    "letter": "g",
+    "value": 17
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 15,
+  "fields": {
+    "letter": "h",
+    "value": 19
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 16,
+  "fields": {
+    "letter": "i",
+    "value": 23
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 17,
+  "fields": {
+    "letter": "\u00ed",
+    "value": 23
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 18,
+  "fields": {
+    "letter": "j",
+    "value": 29
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 19,
+  "fields": {
+    "letter": "k",
+    "value": 31
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 20,
+  "fields": {
+    "letter": "l",
+    "value": 37
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 21,
+  "fields": {
+    "letter": "m",
+    "value": 41
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 22,
+  "fields": {
+    "letter": "n",
+    "value": 43
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 23,
+  "fields": {
+    "letter": "\u00f1",
+    "value": 47
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 24,
+  "fields": {
+    "letter": "o",
+    "value": 53
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 25,
+  "fields": {
+    "letter": "\u00f3",
+    "value": 53
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 26,
+  "fields": {
+    "letter": "p",
+    "value": 59
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 27,
+  "fields": {
+    "letter": "q",
+    "value": 61
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 28,
+  "fields": {
+    "letter": "r",
+    "value": 67
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 29,
+  "fields": {
+    "letter": "s",
+    "value": 71
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 30,
+  "fields": {
+    "letter": "t",
+    "value": 73
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 31,
+  "fields": {
+    "letter": "u",
+    "value": 79
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 32,
+  "fields": {
+    "letter": "\u00fa",
+    "value": 79
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 33,
+  "fields": {
+    "letter": "\u00fc",
+    "value": 79
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 34,
+  "fields": {
+    "letter": "v",
+    "value": 83
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 35,
+  "fields": {
+    "letter": "w",
+    "value": 89
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 36,
+  "fields": {
+    "letter": "x",
+    "value": 97
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 37,
+  "fields": {
+    "letter": "y",
+    "value": 101
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 38,
+  "fields": {
+    "letter": "z",
+    "value": 103
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 39,
+  "fields": {
+    "letter": "A",
+    "value": 2
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 40,
+  "fields": {
+    "letter": "\u00c1",
+    "value": 2
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 41,
+  "fields": {
+    "letter": "B",
+    "value": 3
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 42,
+  "fields": {
+    "letter": "C",
+    "value": 5
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 43,
+  "fields": {
+    "letter": "D",
+    "value": 7
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 44,
+  "fields": {
+    "letter": "E",
+    "value": 11
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 45,
+  "fields": {
+    "letter": "\u00c9",
+    "value": 11
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 46,
+  "fields": {
+    "letter": "F",
+    "value": 13
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 47,
+  "fields": {
+    "letter": "G",
+    "value": 17
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 48,
+  "fields": {
+    "letter": "H",
+    "value": 19
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 49,
+  "fields": {
+    "letter": "I",
+    "value": 23
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 50,
+  "fields": {
+    "letter": "\u00cd",
+    "value": 23
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 51,
+  "fields": {
+    "letter": "J",
+    "value": 29
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 52,
+  "fields": {
+    "letter": "K",
+    "value": 31
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 53,
+  "fields": {
+    "letter": "L",
+    "value": 37
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 54,
+  "fields": {
+    "letter": "M",
+    "value": 41
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 55,
+  "fields": {
+    "letter": "N",
+    "value": 43
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 56,
+  "fields": {
+    "letter": "\u00d1",
+    "value": 47
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 57,
+  "fields": {
+    "letter": "O",
+    "value": 53
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 58,
+  "fields": {
+    "letter": "\u00d3",
+    "value": 53
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 59,
+  "fields": {
+    "letter": "P",
+    "value": 59
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 60,
+  "fields": {
+    "letter": "Q",
+    "value": 61
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 61,
+  "fields": {
+    "letter": "R",
+    "value": 67
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 62,
+  "fields": {
+    "letter": "S",
+    "value": 71
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 63,
+  "fields": {
+    "letter": "T",
+    "value": 73
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 64,
+  "fields": {
+    "letter": "U",
+    "value": 79
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 65,
+  "fields": {
+    "letter": "\u00da",
+    "value": 79
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 66,
+  "fields": {
+    "letter": "\u00dc",
+    "value": 79
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 67,
+  "fields": {
+    "letter": "V",
+    "value": 83
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 68,
+  "fields": {
+    "letter": "W",
+    "value": 89
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 69,
+  "fields": {
+    "letter": "X",
+    "value": 97
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 70,
+  "fields": {
+    "letter": "Y",
+    "value": 101
+  }
+},
+{
+  "model": "activities.lettervalue",
+  "pk": 71,
+  "fields": {
+    "letter": "Z",
+    "value": 103
+  }
+}
+]

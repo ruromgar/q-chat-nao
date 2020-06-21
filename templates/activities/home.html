@@ -1,0 +1,235 @@
+{% extends "activities/activity_base.html" %}
+{% load i18n %}
+{% load static %}
+{% load auth_extras %}
+
+{# Bootstrap related stuff #}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{% bootstrap_messages %}
+{% load crispy_forms_tags %}
+
+{% block base_title %}
+    <section class="jumbotron text-center">
+        <div class="container" id="activities_home_page">
+            <h1 class="jumbotron-heading">Pre-evaluación temprana: Q-CHAT-10</h1>
+            <p class="lead text-muted">Actividades para el apoyo a la terapia</p>
+        </div>
+    </section>
+{% endblock %}
+
+{% block base_content %}
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row border rounded">
+                <div class="col-lg-4 mt-2 text-center">
+                    <img class="rounded-circle" src="{% static 'images/TypeFight_1_KatieKovalcin.jpg' %}"
+                         alt="Generic placeholder image" width="140" height="140">
+                    <h2>Actividad 1</h2>
+                    <p>Respuesta al nombre</p>
+                    <p>
+                        <a class="btn btn-secondary" data-toggle="modal" data-target="#activity01modal"
+                           id="btn_activity01modal" role="button">View details &raquo;</a>
+                        <a class="btn btn-secondary" id="btn_activity01_start" href="{% url 'activity01' %}"
+                           role="button">{% trans "Start" %} &raquo;</a>
+                    </p>
+                </div>
+                <div class="col-lg-4 mt-2 text-center">
+                    <img class="rounded-circle" src="{% static 'images/TypeFight_2_KevinYang.png' %}"
+                         alt="Generic placeholder image" width="140" height="140">
+                    <h2>Actividad 2</h2>
+                    <p>Contacto visual</p>
+                    <p>
+                        <a class="btn btn-secondary" data-toggle="modal" data-target="#activity02modal"
+                           id="btn_activity02modal" role="button">View details &raquo;</a>
+                        <a class="btn btn-secondary" id="btn_activity02_start" href="{% url 'activity02' %}"
+                           role="button">{% trans "Start" %} &raquo;</a>
+                    </p>
+                </div>
+                <div class="col-lg-4 mt-2 text-center">
+                    <img class="rounded-circle" src="{% static 'images/TypeFight_3_NeilRook.jpg' %}"
+                         alt="Generic placeholder image" width="140" height="140">
+                    <h2>Actividad 3</h2>
+                    <p>Capacidad de señalar</p>
+                    <p>
+                        <a class="btn btn-secondary" data-toggle="modal" data-target="#activity03modal"
+                           id="btn_activity03modal" role="button">View details &raquo;</a>
+                        <a class="btn btn-secondary" id="btn_activity03_start" href="{% url 'activity03' %}"
+                           role="button">{% trans "Start" %} &raquo;</a>
+                    </p>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="col-lg-4 mt-2 text-center">
+                    <img class="rounded-circle" src="{% static 'images/TypeFight_4_ElisabethWeber.jpg' %}"
+                         alt="Generic placeholder image" width="140" height="140">
+                    <h2>Actividad 4</h2>
+                    <p>Pa' llamar tu atención</p>
+                    <p>
+                        <a class="btn btn-secondary" data-toggle="modal" data-target="#activity04modal"
+                           id="btn_activity04modal" role="button">View details &raquo;</a>
+                        <a class="btn btn-secondary" id="btn_activity04_start" href="{% url 'activity04' %}"
+                           role="button">{% trans "Start" %} &raquo;</a>
+                    </p>
+                </div>
+                <div class="col-lg-4 mt-2 text-center">
+                    <img class="rounded-circle" src="{% static 'images/TypeFight_5_Sharma.jpg' %}"
+                         alt="Generic placeholder image" width="140" height="140">
+                    <h2>Actividad 5</h2>
+                    <p>Reacción al enfado</p>
+                    <p>
+                        <a class="btn btn-secondary" data-toggle="modal" data-target="#activity05modal"
+                           id="btn_activity05modal" role="button">View details &raquo;</a>
+                        <a class="btn btn-secondary" id="btn_activity05_start" href="{% url 'activity05' %}"
+                           role="button">{% trans "Start" %} &raquo;</a>
+                    </p>
+                </div>
+                <div class="col-lg-4 mt-2 text-center">
+                    <img class="rounded-circle" src="{% static 'images/TypeFight_6_ValentinAdam.jpg' %}"
+                         alt="Generic placeholder image" width="140" height="140">
+                    <h2>Actividad 6</h2>
+                    <p>Uso de gestos</p>
+                    <p>
+                        <a class="btn btn-secondary" data-toggle="modal" data-target="#activity06modal"
+                           id="btn_activity06modal" role="button">View details &raquo;</a>
+                        <a class="btn btn-secondary" id="btn_activity06_start" href="{% url 'activity06' %}"
+                           role="button">{% trans "Start" %} &raquo;</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal fade bd-example-modal-lg" id="activity01modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Actividad 1</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>En primer lugar se hará pasar al sujeto a una sala acompañado por el terapeuta y se hará un contacto previo con el robot NAO. El objetivo de este punto es establecer un clima de confianza en el contexto terapéutico: es conveniente que el terapeuta introduzca al NAO al sujeto. el terapeuta debe situarse lo suficientemente cerca como para observar al sujeto en vivo y controlar aspectos del robot o de la actividad si es necesario.</p>
+                    <p>Son necesarias una silla para el sujeto y una mesa donde se encontrará situado el robot NAO. Es conveniente que el robot se encuentre detrás del niño, para poder discernir mejor si se cumple el objetivo o no. Una vez el sujeto esté sentado, el robot se dirigirá a él, llamándolo por su nombre: <i>"¡Hola, Sara! Soy NAO, ¿qué tal estás?"</i>. Basta una frase simple para que el terapeuta pueda valorar si existe una reacción al nombre.</p>
+                    <p>Una vez marcada la reacción (o su ausencia), la actividad terminará. Al ser tan breve, es preferible que no exista un refuerzo ni una despedida. Es conveniente que esta sea la primera actividad de la sesión, ya que facilita que el flujo sea lógico y minimiza la necesidad de atención por parte del sujeto.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <a type="button" class="btn btn-primary" id="activity01modal_start" href="{% url 'activity01' %}">{% trans "Start" %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade bd-example-modal-lg" id="activity02modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Actividad 2</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>En primer lugar se hará pasar al sujeto a una sala acompañado por el terapeuta y se hará un contacto previo con el robot NAO. El objetivo de este punto es establecer un clima de confianza en el contexto terapéutico: es conveniente que el terapeuta introduzca al NAO al sujeto. el terapeuta debe situarse lo suficientemente cerca como para observar al sujeto en vivo y controlar aspectos del robot o de la actividad si es necesario.</p>
+                    <p>Son necesarias una silla para el sujeto y una mesa donde se encontrará situado el robot NAO. Es necesario que el robot se encuentre delante del niño, para poder establecer contacto visual. Una vez el sujeto esté sentado, el robot se dirigirá a él, mirándolo y llamándolo por su nombre: <i>"¡Hola, Sara! Soy NAO. ¿Cuál es tu animal favorito? El mío es el elefante. Me encantan, con esa trompa, ¡y los colmillos! (...)"</i>. Es conveniente que la frase dure lo suficiente como para que el terapeuta pueda valorar si le mantiene la mirada a Nao.</p>                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <a type="button" class="btn btn-primary" id="activity02modal_start" href="{% url 'activity02' %}">{% trans "Start" %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade bd-example-modal-lg" id="activity03modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Actividad 3</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>En primer lugar se hará pasar al sujeto a una sala acompañado por el terapeuta y se hará un contacto previo con el robot NAO. El objetivo de este punto es establecer un clima de confianza en el contexto terapéutico: es conveniente que el terapeuta introduzca al NAO al sujeto. el terapeuta debe situarse lo suficientemente cerca como para observar al sujeto en vivo y controlar aspectos del robot o de la actividad si es necesario.</p>
+                    <p>Son necesarias una silla para el sujeto y una mesa donde se encontrará situado el robot NAO. Es necesario que el robot se encuentre delante del niño, para poder establecer contacto visual. En un caso ideal se dispondría de algo que al niño le guste, como un juguete concreto; previsiblemente esto no siempre será posible, por lo que se ha adaptado ligeramente la actividad. Una vez el sujeto esté sentado, el robot se dirigirá a él, mirándolo y llamándolo por su nombre: <i>"¡Hola, Sara! Soy NAO. ¿Te gustan los coches? ¡A mí me encantan! (...)"</i>. El robot introducirá el tema, los coches, durante un breve discurso. A continuación, el terapeuta colocará dos láminas entre el Nao y el niño, una con un coche y otra en blanco. Nao preguntará entonces <i>"Oye, ¿dónde está el coche?"</i>. El terapeuta apuntará si el niño señala o no, y la actividad finalizará. Al acabar, Nao le agradecerá su ayuda al niño: <i>"¡Muchas gracias, Sara!</i>.</p>                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <a type="button" class="btn btn-primary" id="activity03modal_start" href="{% url 'activity03' %}">{% trans "Start" %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade bd-example-modal-lg" id="activity04modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Actividad 4</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>En primer lugar se hará pasar al sujeto a una sala acompañado por el terapeuta y se hará un contacto previo con el robot NAO. El objetivo de este punto es establecer un clima de confianza en el contexto terapéutico: es conveniente que el terapeuta introduzca al NAO al sujeto. el terapeuta debe situarse lo suficientemente cerca como para observar al sujeto en vivo y controlar aspectos del robot o de la actividad si es necesario.</p>
+                    <p>Son necesarias una silla para el sujeto y una mesa donde se encontrará situado el robot NAO, además de un altavoz pequeño situado cerca (pero no al lado) del robot. Es necesario que el robot se encuentre delante del niño, para poder establecer contacto visual. Una vez el sujeto esté sentado, el robot se dirigirá a él, mirándolo y llamándolo por su nombre: <i>"¡Hola, Sara! Soy NAO. ¡Vamos a escuchar una canción!"</i>. A continuación, desde el altavoz empezará a sonar una canción infantil. En el clímax, la canción debe detenerse abruptamente; es importante que el corte sea claro, inconfundible con un final natural. El terapeuta debe marcar si el niño señala a Nao o al altavoz, indicando que algo ha ocurrido. Al finalizar, Nao debe despedirse y decir algo como <i>"Vaya, ¡no sé qué ha pasado! Lo siento"</i>.</p>                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <a type="button" class="btn btn-primary" id="activity04modal_start" href="{% url 'activity04' %}">{% trans "Start" %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade bd-example-modal-lg" id="activity05modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Actividad 5</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>En primer lugar se hará pasar al sujeto a una sala acompañado por el terapeuta y se hará un contacto previo con el robot NAO. El objetivo de este punto es establecer un clima de confianza en el contexto terapéutico: es conveniente que el terapeuta introduzca al NAO al sujeto. el terapeuta debe situarse lo suficientemente cerca como para observar al sujeto en vivo y controlar aspectos del robot o de la actividad si es necesario.</p>
+                    <p>Son necesarias una silla para el sujeto y una mesa donde se encontrará situado el robot NAO, así como un objeto (por ejemplo, un coche de juguete) que debe sostener Nao. Es necesario que el robot se encuentre delante del niño, para poder establecer contacto visual. Una vez el sujeto esté sentado, el robot se dirigirá a él, mirándolo y llamándolo por su nombre: <i>"¡Hola, Sara! Soy NAO. ¡Mira qué juguete tengo! Es nuevo, me lo ha regalado un amigo"</i>. A continuación, Nao soltará el juguete, que caerá sobre la mesa. Nao debe mostrar aflicción inmediatamente: <i>"¡Oh, no! ¡Se ha roto!"</i>. El terapeuta debe marcar si, según su criterio, el niño hace algún gesto de consuelo.</p>                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <a type="button" class="btn btn-primary" id="activity05modal_start" href="{% url 'activity05' %}">{% trans "Start" %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade bd-example-modal-lg" id="activity06modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Actividad 6</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>En primer lugar se hará pasar al sujeto a una sala acompañado por el terapeuta y se hará un contacto previo con el robot NAO. El objetivo de este punto es establecer un clima de confianza en el contexto terapéutico: es conveniente que el terapeuta introduzca al NAO al sujeto. el terapeuta debe situarse lo suficientemente cerca como para observar al sujeto en vivo y controlar aspectos del robot o de la actividad si es necesario.</p>
+                    <p>Son necesarias una silla para el sujeto y una mesa donde se encontrará situado el robot NAO. Es necesario que el robot se encuentre delante del niño, para poder establecer contacto visual. Una vez el sujeto esté sentado, el robot se dirigirá a él, mirándolo y llamándolo por su nombre: <i>"¡Hola, Sara! Soy NAO. ¿Te gustan los dinosaurios? A mí me gustan mucho, mi favorito es el brontosaurio, porque ¡es muy grande! (...)"</i>. Al acabar, Nao se despedirá del niño con la mano, haciendo el gesto de despedida. El terapeuta debe observar si el niño se despide de él, vigilando que no sea simple imitación. De nuevo, es necesario que opere según su criterio profesional.</p>                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <a type="button" class="btn btn-primary" id="activity06modal_start" href="{% url 'activity06' %}">{% trans "Start" %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascript %}
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+{% endblock %}
+
+

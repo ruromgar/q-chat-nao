@@ -1,0 +1,28 @@
+{% load i18n %}
+{% load static %}
+{% load auth_extras %}
+
+{# Bootstrap related stuff #}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{% bootstrap_messages %}
+{% load crispy_forms_tags %}
+
+<!doctype html>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark p-0">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="{% url 'home' %}">UNED AI</a>
+      <div class="navbar-nav px-3 ml-auto">
+        {% if user.is_authenticated %}
+            {% if not request.user|has_group:"Patients" %}
+                <a class="nav-item nav-link" id="header_profile" href="{% url 'user_list' %}">{% trans "Users" %}</a>
+            {% endif %}
+            <a class="nav-item nav-link" id="header_profile" href="{% url 'profile' user.id %}">{% trans "Profile" %}</a>
+            <a class="nav-item nav-link" id="header_logout" href="{% url 'auth_logout' %}">{% trans "Log out" %}</a>
+        {% else %}
+            <a class="nav-item nav-link" id="header_login" href="{% url 'auth_login' %}">{% trans "Log in" %}</a>
+            <a class="nav-item nav-link" id="header_signup" href="{% url 'registration_register' %}">{% trans "Sign up" %}</a>
+        {% endif %}
+      </div>
+    </nav>
+</html>
