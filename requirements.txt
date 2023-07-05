@@ -15,7 +15,7 @@ django-sslserver==0.20
 docutils==0.14
 google-api-core==1.2.1
 googleapis-common-protos==1.5.3
-grpcio==1.13.0
+grpcio==1.53.0
 idna==2.7
 imagesize==1.0.0
 Jinja2>=2.10.1
